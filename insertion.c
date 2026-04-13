@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+    int arr[10] = {11,9,4,6,7,8,3,2,5,1};
+    for(int i = 1 ; i < 10 ; i++){
+        int key = arr[i];
+        int j = i - 1;
+        while(j >= 0 && arr[j] > key){
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = key;
+    }
+    for(int i = 0 ; i < 10 ; i++){
+        printf("%d ",arr[i]);
+    }
+}
+
